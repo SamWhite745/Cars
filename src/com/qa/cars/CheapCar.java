@@ -1,12 +1,11 @@
 package com.qa.cars;
 
 public class CheapCar extends Car {
+	private boolean warranty;
 	
-	//private boolean warranty = false;
-	
-    CheapCar() {
+    CheapCar(boolean warranty) {
         super(CarType.CHEAP);
-//        this.warranty = warranty;
+        this.setWarranty(warranty);
         construct();
     }
  
@@ -19,4 +18,12 @@ public class CheapCar extends Car {
     public void noise() {
     	System.out.println("CLANK");
     }
+
+	public boolean getWarranty() {
+		return warranty;
+	}
+
+	public void setWarranty(boolean warranty) {
+		this.warranty = warranty;
+	}
 }

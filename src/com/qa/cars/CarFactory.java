@@ -6,7 +6,7 @@ public class CarFactory {
         Car car = null;
         switch (model) {
         case CHEAP:
-            car = new CheapCar();
+            car = new CheapCar(true);
             break;
  
         case AFFORDABLE:
@@ -18,7 +18,7 @@ public class CarFactory {
             break;
  
         default:
-            // throw some exception
+            // throw invalidCar exception
             break;
         }
         return car;
